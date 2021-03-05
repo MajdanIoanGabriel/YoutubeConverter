@@ -9,7 +9,10 @@
       Title="ConvertPage">
 
     <Grid>
-        <TextBox x:Name="Input" HorizontalAlignment="Left" Margin="143,0,0,0" Text="Insert link here" TextWrapping="Wrap" VerticalAlignment="Stretch" Width="257" Height="43" TextAlignment="Left" MaxLines="1" MinLines="1"/>
-        <Button x:Name="Convert" Content="Convert!" HorizontalAlignment="Left" Margin="465,0,0,0" VerticalAlignment="Center" Height="43" Width="116" Click="Button_Click"/>
+        <Grid.Background>
+            <ImageBrush ImageSource="D:\Facultate\Semestrul II\.NET\YoutubeConverter\images\convert_background.png" Stretch="UniformToFill"></ImageBrush>
+        </Grid.Background>
+        <TextBox x:Name="Input" Margin="400,204,144,204" Text="Insert link here" TextWrapping="Wrap" Height="42" TextAlignment="Left" MaxLines="1" MinLines="1" Width="256" MaxHeight="60" MaxWidth="400"/>
+        <Button x:Name="Convert" Content="Convert!" Click="Button_Click" Width="120" Height="60" Margin="468,276,212,114"/>
     </Grid>
 </Page>
