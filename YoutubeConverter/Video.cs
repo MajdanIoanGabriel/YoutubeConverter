@@ -15,7 +15,7 @@ namespace YoutubeConverter
 
         public string mp3size { get; set; }
     }
-    
+
     public class Video
     {
         public string vidID { get; set; }
@@ -23,11 +23,13 @@ namespace YoutubeConverter
         public string vidThumb { get; set; }
         public double duration { get; set; }
         public Dictionary<string, Info> vidInfo { get; set; }
+        public string path { get; set; }
 
         public void download(string filepath, string extension)
         {
             var client = new WebClient();
-            client.DownloadFile(vidInfo["0"].dloadUrl, filepath + vidTitle + extension);
+            path = filepath + vidTitle + extension;
+            client.DownloadFile(vidInfo["0"].dloadUrl, path);
         }
 
     }

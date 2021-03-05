@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
@@ -27,13 +28,13 @@ namespace YoutubeConverter
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private async void Button_Click(object sender, RoutedEventArgs e)
         {
             /*var client = new HttpClient();
             var request = new HttpRequestMessage
             {
                 Method = HttpMethod.Get,
-                RequestUri = new Uri("https://download-video-youtube1.p.rapidapi.com/mp3/En8JdFUvKZk?stime=00%3A01%3A00&etime=00%3A02%3A00"),
+                RequestUri = new Uri("https://download-video-youtube1.p.rapidapi.com/mp3/En8JdFUvKZk?"),
                 Headers =
     {
         { "x-rapidapi-key", "646a7edddbmsh2e7804d95936819p1a928djsn76645304dbce" },
@@ -43,15 +44,14 @@ namespace YoutubeConverter
             using var response = await client.SendAsync(request);
             response.EnsureSuccessStatusCode();
             var body = await response.Content.ReadAsStringAsync();
-            //MessageBox.Show(body); */
-            //System.IO.File.WriteAllText(@"D:\Facultate\Semestrul II\.NET\YoutubeConverter\response.json", body);
+            System.IO.File.WriteAllText(@"D:\Facultate\Semestrul II\.NET\YoutubeConverter\response.json", body);*/
 
-            //using StreamReader file = File.OpenText(@"D:\Facultate\Semestrul II\.NET\YoutubeConverter\response.json");
+            using StreamReader file = File.OpenText(@"D:\Facultate\Semestrul II\.NET\YoutubeConverter\response.json");
             Video video = JsonSerializer.Deserialize<Video>(File.ReadAllText(@"D:\Facultate\Semestrul II\.NET\YoutubeConverter\response.json"));
 
             var filepath = @"D:\Facultate\Semestrul II\.NET\YoutubeConverter\";
             var extension = ".mp3";
-            //MessageBox.Show(data.vidTitle);
+
             video.download(filepath, extension);
             NavigationService.Navigate(new PlayPage(video));
         }

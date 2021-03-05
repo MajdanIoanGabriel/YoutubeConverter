@@ -8,8 +8,13 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="PlayPage">
 
-    <Grid>
-        <Label x:Name="video_title" Content="" HorizontalAlignment="Left" Margin="156,124,0,0" VerticalAlignment="Top"/>
-
-    </Grid>
+    <StackPanel Margin="10">
+        <Label x:Name="video_title" Content="" HorizontalAlignment="Center" Margin="0,129,0,0" VerticalAlignment="Top" Width="138"/>
+        <Label x:Name="lblStatus" Content="Not playing..." HorizontalContentAlignment="Center" Margin="5" />
+        <WrapPanel HorizontalAlignment="Center">
+            <Button Name="btnPlay" Click="BtnPlay_Click">Play</Button>
+            <Button Name="btnPause" Margin="5,0" Click="BtnPause_Click">Pause</Button>
+            <Button Name="btnStop" Click="BtnStop_Click">Stop</Button>
+        </WrapPanel>
+    </StackPanel>
 </Page>
