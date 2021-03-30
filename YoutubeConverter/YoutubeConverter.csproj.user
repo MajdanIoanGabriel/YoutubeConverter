@@ -10,12 +10,18 @@
     <Compile Update="ConvertPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="DownloadPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="PlayPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="ConvertPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="DownloadPage.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">

@@ -24,3 +24,5 @@ D:\Facultate\Semestrul II\.NET\YoutubeConverter\YoutubeConverter\obj\Debug\net5.
 D:\Facultate\Semestrul II\.NET\YoutubeConverter\YoutubeConverter\obj\Debug\net5.0-windows\ConvertPage.baml
 D:\Facultate\Semestrul II\.NET\YoutubeConverter\YoutubeConverter\obj\Debug\net5.0-windows\PlayPage.g.cs
 D:\Facultate\Semestrul II\.NET\YoutubeConverter\YoutubeConverter\obj\Debug\net5.0-windows\PlayPage.baml
+D:\Facultate\Semestrul II\.NET\YoutubeConverter\YoutubeConverter\obj\Debug\net5.0-windows\DownloadPage.g.cs
+D:\Facultate\Semestrul II\.NET\YoutubeConverter\YoutubeConverter\obj\Debug\net5.0-windows\DownloadPage.baml

@@ -49,11 +49,11 @@ namespace YoutubeConverter
             using StreamReader file = File.OpenText(@"D:\Facultate\Semestrul II\.NET\YoutubeConverter\response.json");
             Video video = JsonSerializer.Deserialize<Video>(File.ReadAllText(@"D:\Facultate\Semestrul II\.NET\YoutubeConverter\response.json"));
 
-            var filepath = @"D:\Facultate\Semestrul II\.NET\YoutubeConverter\";
-            var extension = ".mp3";
+            //var filepath = @"D:\Facultate\Semestrul II\.NET\YoutubeConverter\";
+            //var extension = ".mp3";
 
-            video.download(filepath, extension);
-            NavigationService.Navigate(new PlayPage(video));
+            //video.download(filepath, extension);
+            NavigationService.Navigate(new DownloadPage(video));
         }
     }
 }
