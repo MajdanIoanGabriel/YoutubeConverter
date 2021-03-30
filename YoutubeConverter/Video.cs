@@ -25,8 +25,18 @@ namespace YoutubeConverter
         public Dictionary<string, Info> vidInfo { get; set; }
         public string path { get; set; }
 
+        private void removeIllegalChars()
+        {
+            var charsToRemove = new string[] { "/", "\\", ":", "*", "?", "\"", "<", ">", "|" };
+            foreach (var c in charsToRemove)
+            {
+                vidTitle = vidTitle.Replace(c, string.Empty);
+            }
+        }
+
         public void download(string filepath, string extension)
         {
+            removeIllegalChars();
             var client = new WebClient();
             path = filepath + vidTitle + extension;
             client.DownloadFile(vidInfo["0"].dloadUrl, path);

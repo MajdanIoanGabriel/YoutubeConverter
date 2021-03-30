@@ -9,7 +9,7 @@
       Title="PlayPage">
 
     <StackPanel Margin="10">
-        <Label x:Name="video_title" Content="" HorizontalAlignment="Center" Margin="0,129,0,0" VerticalAlignment="Top" Width="138"/>
+        <Label x:Name="video_title" Content="" HorizontalAlignment="Center" Margin="0,129,0,0" Width="500" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
         <Label x:Name="lblStatus" Content="Not playing..." HorizontalContentAlignment="Center" Margin="5" />
         <WrapPanel HorizontalAlignment="Center">
             <Button Name="btnPlay" Click="BtnPlay_Click">Play</Button>
