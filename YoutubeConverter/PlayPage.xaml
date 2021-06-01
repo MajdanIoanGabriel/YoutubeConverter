@@ -4,45 +4,50 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:YoutubeConverter"
-      mc:Ignorable="d" 
+      mc:Ignorable="d"
       d:DesignHeight="450" d:DesignWidth="800"
       Title="PlayPage">
+    
+    <Page.Background>
+        <ImageBrush ImageSource="D:\Facultate\Semestrul II\.NET\YoutubeConverter\images\play_background.jpg" Stretch="UniformToFill"></ImageBrush>
+    </Page.Background>
 
-    <StackPanel Margin="10">
 
-        <StackPanel.Background>
-            <ImageBrush ImageSource="D:\Facultate\Semestrul II\.NET\YoutubeConverter\images\play_background.jpg" Stretch="UniformToFill"></ImageBrush>
-        </StackPanel.Background>
+    <StackPanel VerticalAlignment="Center">
 
-        <Label x:Name="video_title" Content="" HorizontalAlignment="Center" Margin="0,200,0,0" Width="780" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="32" FontFamily="MV Boli" Foreground="White"/>
+        <StackPanel.Resources>
+            <Style TargetType="{x:Type Button}">
+                <Setter Property="Background" Value="Red"/>
+                <Setter Property="Foreground" Value="White"/>
+                <Setter Property="FontFamily" Value="MV Boli"/>
+                <Setter Property="Margin" Value="0,0,0,15"/>
+                <Setter Property="FontSize" Value="28"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border BorderBrush="White" BorderThickness="2" CornerRadius="10" Padding="10,1,10,1" Background="{TemplateBinding Background}">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+                <Style.Triggers>
+                    <Trigger Property="IsMouseOver" Value="True">
+                        <Setter Property="Background" Value="#FFFF3232"/>
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+        </StackPanel.Resources>
+
+        <Label x:Name="video_title" Content="Video Title" HorizontalAlignment="Center" Width="780" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="32" FontFamily="MV Boli" Foreground="White"/>
         <Label x:Name="lblStatus" Content="Not playing..." HorizontalContentAlignment="Center" FontSize="32" FontFamily="MV Boli" Background="Transparent" Foreground="White" />
         <WrapPanel HorizontalAlignment="Center">
-            <WrapPanel.Resources>
-                <Style TargetType="{x:Type Button}">
-                    <Setter Property="Background" Value="Red"/>
-                    <Setter Property="Foreground" Value="White"/>
-                    <Setter Property="FontFamily" Value="MV Boli"/>
-                    <Setter Property="FontSize" Value="28"/>
-                    <Setter Property="Template">
-                        <Setter.Value>
-                            <ControlTemplate TargetType="{x:Type Button}">
-                                <Border BorderBrush="White" BorderThickness="2" CornerRadius="10" Padding="10,1,10,1" Background="{TemplateBinding Background}">
-                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                </Border>
-                            </ControlTemplate>
-                        </Setter.Value>
-                    </Setter>
-                    <Style.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Background" Value="#FFFF3232"/>
-                        </Trigger>
-                    </Style.Triggers>
-                </Style>
-            </WrapPanel.Resources>
-
-            <Button Name="btnPlay" Click="BtnPlay_Click">Play</Button>
-            <Button Name="btnPause" Margin="15,0" Click="BtnPause_Click" BorderBrush="White">Pause</Button>
-            <Button Name="btnStop" Click="BtnStop_Click">Stop</Button>
+            <Button Name="btnPlay"  Click="BtnPlay_Click">Play</Button>
+            <Button Name="btnPause" Click="BtnPause_Click" Margin="15,0,15,15">Pause</Button>
+            <Button Name="btnStop"  Click="BtnStop_Click">Stop</Button>
+        </WrapPanel>
+        <WrapPanel HorizontalAlignment="Center">
+            <Button Name="btnBack" Click="BtnBack_Click">Convert Another</Button>
         </WrapPanel>
     </StackPanel>
 </Page>

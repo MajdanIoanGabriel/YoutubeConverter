@@ -31,10 +31,6 @@ namespace YoutubeConverter
             video_title.Content = video.vidTitle;
 
             mediaPlayer.Open(new Uri(video.path));
-            //OpenFileDialog openFileDialog = new OpenFileDialog();
-            //openFileDialog.Filter = "MP3 files (*.mp3)|*.mp3|All files (*.*)|*.*";
-            //if (openFileDialog.ShowDialog() == true)
-                //mediaPlayer.Open(new Uri(openFileDialog.FileName));
 
             DispatcherTimer timer = new();
             timer.Interval = TimeSpan.FromSeconds(1);
@@ -63,6 +59,11 @@ namespace YoutubeConverter
         private void BtnStop_Click(object sender, RoutedEventArgs e)
         {
             mediaPlayer.Stop();
+        }
+
+        private void BtnBack_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new ConvertPage());
         }
     }
 }
