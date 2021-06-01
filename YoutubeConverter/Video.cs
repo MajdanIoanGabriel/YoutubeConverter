@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
@@ -34,12 +36,32 @@ namespace YoutubeConverter
             }
         }
 
-        public void download(string filepath, string extension)
+        public void download()
         {
             removeIllegalChars();
             var client = new WebClient();
-            path = filepath + vidTitle + extension;
-            client.DownloadFile(vidInfo["0"].dloadUrl, path);
+
+            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+            saveFileDialog1.Filter = "MP3 file (*.mp3)|*.mp3";
+            saveFileDialog1.Title = "Save audio File";
+            saveFileDialog1.FileName = vidTitle;
+
+            if(saveFileDialog1.ShowDialog() == true) {
+
+                if (saveFileDialog1.FileName != "") {
+                    path = saveFileDialog1.FileName;
+                    vidTitle = Path.GetFileName(path);
+                    client.DownloadFile(vidInfo["0"].dloadUrl, path);
+                }
+                else {
+                    throw (new Exception());
+                }
+                    
+            }
+            else {
+                throw (new Exception());
+            }
+
         }
 
     }
