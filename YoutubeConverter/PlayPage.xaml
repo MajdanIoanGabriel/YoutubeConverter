@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:YoutubeConverter"
       mc:Ignorable="d"
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="720" d:DesignWidth="1280"
       Title="PlayPage">
     
     <Page.Background>
@@ -16,12 +16,36 @@
     <StackPanel VerticalAlignment="Center">
 
         <StackPanel.Resources>
+
+            <Style TargetType="{x:Type Label}">
+                <Setter Property="Effect">
+                    <Setter.Value>
+                        <DropShadowEffect
+                            ShadowDepth="4"
+                            Direction="330"
+                            Color="Black"
+                            Opacity="0.5"
+                            BlurRadius="4"/>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
             <Style TargetType="{x:Type Button}">
                 <Setter Property="Background" Value="Red"/>
                 <Setter Property="Foreground" Value="White"/>
                 <Setter Property="FontFamily" Value="MV Boli"/>
                 <Setter Property="Margin" Value="0,0,0,15"/>
                 <Setter Property="FontSize" Value="28"/>
+                <Setter Property="Effect">
+                    <Setter.Value>
+                        <DropShadowEffect
+                            ShadowDepth="4"
+                            Direction="330"
+                            Color="Black"
+                            Opacity="0.5"
+                            BlurRadius="4"/>
+                    </Setter.Value>
+                </Setter>
                 <Setter Property="Template">
                     <Setter.Value>
                         <ControlTemplate TargetType="{x:Type Button}">
@@ -39,15 +63,13 @@
             </Style>
         </StackPanel.Resources>
 
-        <Label x:Name="video_title" Content="Video Title" HorizontalAlignment="Center" Width="780" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="32" FontFamily="MV Boli" Foreground="White"/>
+        <Label x:Name="video_title" Content="Video Title" HorizontalAlignment="Stretch" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="50" FontFamily="MV Boli" Foreground="White"/>
         <Label x:Name="lblStatus" Content="Not playing..." HorizontalContentAlignment="Center" FontSize="32" FontFamily="MV Boli" Background="Transparent" Foreground="White" />
         <WrapPanel HorizontalAlignment="Center">
             <Button Name="btnPlay"  Click="BtnPlay_Click">Play</Button>
             <Button Name="btnPause" Click="BtnPause_Click" Margin="15,0,15,15">Pause</Button>
             <Button Name="btnStop"  Click="BtnStop_Click">Stop</Button>
         </WrapPanel>
-        <WrapPanel HorizontalAlignment="Center">
-            <Button Name="btnBack" Click="BtnBack_Click">Convert Another</Button>
-        </WrapPanel>
+        <Button Name="btnBack" Click="BtnBack_Click" HorizontalAlignment="Center" VerticalAlignment="Center">Convert Another</Button>
     </StackPanel>
 </Page>

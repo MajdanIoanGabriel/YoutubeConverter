@@ -5,14 +5,127 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:YoutubeConverter"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="720" d:DesignWidth="1280"
       Title="ConvertPage">
 
-    <Grid>
-        <Grid.Background>
-            <ImageBrush ImageSource="D:\Facultate\Semestrul II\.NET\YoutubeConverter\images\convert_background.png" Stretch="UniformToFill"></ImageBrush>
-        </Grid.Background>
-        <TextBox x:Name="Input" Margin="400,204,144,204" Text="Insert link here" TextWrapping="Wrap" Height="42" TextAlignment="Left" MaxLines="1" MinLines="1" Width="256" MaxHeight="60" MaxWidth="400" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-        <Button x:Name="Convert" Content="Convert!" Click="Button_Click" Width="120" Height="60" Margin="468,276,212,114"/>
-    </Grid>
+    <Page.Background>
+        <ImageBrush ImageSource="D:\Facultate\Semestrul II\.NET\YoutubeConverter\images\convert_background.png" Stretch="UniformToFill"></ImageBrush>
+    </Page.Background>
+
+    <StackPanel VerticalAlignment="Center" Margin="200,0,0,0">
+
+        <StackPanel.Resources>
+
+            <Style TargetType="{x:Type Label}">
+                <Setter Property="Effect">
+                    <Setter.Value>
+                        <DropShadowEffect
+                            ShadowDepth="4"
+                            Direction="330"
+                            Color="Black"
+                            Opacity="0.5"
+                            BlurRadius="4"/>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <Style TargetType="{x:Type Button}">
+                <Setter Property="Background" Value="#FFCF2021"/>
+                <Setter Property="Foreground" Value="White"/>
+                <Setter Property="FontFamily" Value="MV Boli"/>
+                <Setter Property="Margin" Value="0,0,0,15"/>
+                <Setter Property="FontSize" Value="28"/>
+                <Setter Property="Effect">
+                    <Setter.Value>
+                        <DropShadowEffect
+                            ShadowDepth="4"
+                            Direction="330"
+                            Color="Black"
+                            Opacity="0.5"
+                            BlurRadius="4"/>
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border BorderBrush="White" BorderThickness="2" CornerRadius="10" Padding="10,1,10,1" Background="{TemplateBinding Background}">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+                <Style.Triggers>
+                    <Trigger Property="IsMouseOver" Value="True">
+                        <Setter Property="Background" Value="#FFD94B4B"/>
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+            
+            <Style TargetType="TextBox">
+                <Setter Property="Effect">
+                    <Setter.Value>
+                        <DropShadowEffect
+                            ShadowDepth="4"
+                            Direction="330"
+                            Color="Black"
+                            Opacity="0.5"
+                            BlurRadius="4"/>
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type TextBox}">
+                            <Border BorderBrush="White" BorderThickness="2" CornerRadius="10" Background="{TemplateBinding Background}">
+                                <ScrollViewer x:Name="PART_ContentHost" Focusable="false" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden"/>
+                            </Border>
+                            
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+                
+            </Style>
+        </StackPanel.Resources>
+
+        <Label x:Name="label_yt"
+               Content="Youtube MP3 Converter" 
+               HorizontalAlignment="Center" 
+               VerticalContentAlignment="Center" 
+               HorizontalContentAlignment="Center" 
+               FontSize="70" 
+               FontFamily="MV Boli"
+               Foreground="White" FontWeight="Bold"/>
+
+        <Label x:Name="label_here"
+               Content="Insert link here" 
+               HorizontalAlignment="Center" 
+               Width="780"
+               VerticalContentAlignment="Center" 
+               HorizontalContentAlignment="Center" 
+               FontSize="32" 
+               FontFamily="MV Boli"
+               Foreground="White"/>
+        <TextBox x:Name="Input" 
+                 TextWrapping="Wrap" 
+                 TextAlignment="Left" 
+                 BorderThickness="2"
+                 Margin="160,0,160,15"
+                 MaxLines="1"
+                 HorizontalContentAlignment="Center" 
+                 VerticalContentAlignment="Center" 
+                 Background="{x:Null}" 
+                 BorderBrush="White" 
+                 Foreground="White" 
+                 SelectionBrush="#FFFFA7A7" 
+                 SelectionTextBrush="Red" 
+                 FontFamily="MV Boli" 
+                 FontSize="28" 
+                 HorizontalAlignment="Stretch"
+                 VerticalAlignment="Center">
+        </TextBox>
+        <Button x:Name="Convert" 
+                Content="Convert!"
+                Click="Button_Click" 
+                HorizontalAlignment="Center" 
+                VerticalAlignment="Center"/>
+    </StackPanel>
 </Page>
