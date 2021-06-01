@@ -6,4 +6,16 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="images\convert_background.png" />
+    <None Remove="images\logo.ico" />
+    <None Remove="images\play_background.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="images\convert_background.png" />
+    <Resource Include="images\logo.ico" />
+    <Resource Include="images\play_background.jpg" />
+  </ItemGroup>
+
 </Project>

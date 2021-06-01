@@ -1,18 +1,8 @@
-﻿using Microsoft.Win32;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
-using System.Windows.Shapes;
 using System.Windows.Threading;
 
 namespace YoutubeConverter
@@ -22,15 +12,15 @@ namespace YoutubeConverter
     /// </summary>
     public partial class PlayPage : Page
     {
-        private Video video { get; set; }
-        private MediaPlayer mediaPlayer = new();
+        private Video Video { get; set; }
+        private readonly MediaPlayer mediaPlayer = new();
         public PlayPage(Video new_video)
         {
             InitializeComponent();
-            video = new_video;
-            video_title.Content = video.vidTitle;
+            Video = new_video;
+            video_title.Content = Video.vidTitle;
 
-            mediaPlayer.Open(new Uri(video.path));
+            mediaPlayer.Open(new Uri(Video.path));
 
             DispatcherTimer timer = new();
             timer.Interval = TimeSpan.FromSeconds(1);
@@ -63,6 +53,7 @@ namespace YoutubeConverter
 
         private void BtnBack_Click(object sender, RoutedEventArgs e)
         {
+            mediaPlayer.Stop();
             NavigationService.Navigate(new ConvertPage());
         }
     }

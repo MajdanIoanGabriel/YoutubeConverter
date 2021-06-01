@@ -9,7 +9,7 @@
       Title="ConvertPage">
 
     <Page.Background>
-        <ImageBrush ImageSource="D:\Facultate\Semestrul II\.NET\YoutubeConverter\images\convert_background.png" Stretch="UniformToFill"></ImageBrush>
+        <ImageBrush ImageSource="\images\convert_background.png" Stretch="UniformToFill"></ImageBrush>
     </Page.Background>
 
     <StackPanel VerticalAlignment="Center" Margin="200,0,0,0">

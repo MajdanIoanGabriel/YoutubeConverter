@@ -1,20 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
 using System.Net.Http;
-using System.Text;
 using System.Text.Json;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace YoutubeConverter
 {
@@ -63,14 +52,10 @@ namespace YoutubeConverter
             }
             response.EnsureSuccessStatusCode();
             var body = await response.Content.ReadAsStringAsync();
-            System.IO.File.WriteAllText(@"D:\Facultate\Semestrul II\.NET\YoutubeConverter\response.json", body);
             Video video = JsonSerializer.Deserialize<Video>(body);
 
-            // using StreamReader file = File.OpenText(@"D:\Facultate\Semestrul II\.NET\YoutubeConverter\response.json");
-            // Video video = JsonSerializer.Deserialize<Video>(File.ReadAllText(@"D:\Facultate\Semestrul II\.NET\YoutubeConverter\response.json"));
-
             try {
-                video.download();
+                video.Download();
             }
             catch (Exception) {
                 MessageBox.Show("No filename entered!", "Error");

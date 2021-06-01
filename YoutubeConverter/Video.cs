@@ -2,19 +2,15 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Net;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace YoutubeConverter
 {
+    #pragma warning disable IDE1006 // Naming Styles
     public class Info
     {
         public string dloadUrl { get; set; }
-
         public int bitrate { get; set; }
-
         public string mp3size { get; set; }
     }
 
@@ -27,7 +23,9 @@ namespace YoutubeConverter
         public Dictionary<string, Info> vidInfo { get; set; }
         public string path { get; set; }
 
-        private void removeIllegalChars()
+        #pragma warning restore IDE1006 // Naming Styles
+
+        private void RemoveIllegalChars()
         {
             var charsToRemove = new string[] { "/", "\\", ":", "*", "?", "\"", "<", ">", "|" };
             foreach (var c in charsToRemove)
@@ -36,17 +34,19 @@ namespace YoutubeConverter
             }
         }
 
-        public void download()
+        public void Download()
         {
-            removeIllegalChars();
+            RemoveIllegalChars();
             var client = new WebClient();
 
-            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
-            saveFileDialog1.Filter = "MP3 file (*.mp3)|*.mp3";
-            saveFileDialog1.Title = "Save audio File";
-            saveFileDialog1.FileName = vidTitle;
+            SaveFileDialog saveFileDialog1 = new()
+            {
+                Filter = "MP3 file (*.mp3)|*.mp3",
+                Title = "Save audio File",
+                FileName = vidTitle
+            };
 
-            if(saveFileDialog1.ShowDialog() == true) {
+            if (saveFileDialog1.ShowDialog() == true) {
 
                 if (saveFileDialog1.FileName != "") {
                     path = saveFileDialog1.FileName;

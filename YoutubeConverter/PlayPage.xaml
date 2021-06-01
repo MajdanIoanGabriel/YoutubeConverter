@@ -9,7 +9,7 @@
       Title="PlayPage">
     
     <Page.Background>
-        <ImageBrush ImageSource="D:\Facultate\Semestrul II\.NET\YoutubeConverter\images\play_background.jpg" Stretch="UniformToFill"></ImageBrush>
+        <ImageBrush ImageSource="images\play_background.jpg" Stretch="UniformToFill"></ImageBrush>
     </Page.Background>
 
 
@@ -63,13 +63,29 @@
             </Style>
         </StackPanel.Resources>
 
-        <Label x:Name="video_title" Content="Video Title" HorizontalAlignment="Stretch" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="50" FontFamily="MV Boli" Foreground="White"/>
-        <Label x:Name="lblStatus" Content="Not playing..." HorizontalContentAlignment="Center" FontSize="32" FontFamily="MV Boli" Background="Transparent" Foreground="White" />
+        <Label x:Name="video_title" 
+               Content="Video Title" 
+               HorizontalAlignment="Stretch" 
+               VerticalContentAlignment="Center" 
+               HorizontalContentAlignment="Center" 
+               FontSize="50" 
+               FontFamily="MV Boli" 
+               Foreground="White"/>
+        <Label x:Name="lblStatus" 
+               Content="Not playing..." 
+               HorizontalContentAlignment="Center" 
+               FontSize="32" 
+               FontFamily="MV Boli"
+               Background="Transparent" 
+               Foreground="White" />
         <WrapPanel HorizontalAlignment="Center">
             <Button Name="btnPlay"  Click="BtnPlay_Click">Play</Button>
             <Button Name="btnPause" Click="BtnPause_Click" Margin="15,0,15,15">Pause</Button>
             <Button Name="btnStop"  Click="BtnStop_Click">Stop</Button>
         </WrapPanel>
-        <Button Name="btnBack" Click="BtnBack_Click" HorizontalAlignment="Center" VerticalAlignment="Center">Convert Another</Button>
+        <Button Name="btnBack" 
+                Click="BtnBack_Click" 
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center">Convert Another</Button>
     </StackPanel>
 </Page>

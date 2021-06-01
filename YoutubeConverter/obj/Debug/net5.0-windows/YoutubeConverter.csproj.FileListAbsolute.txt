@@ -6,11 +6,15 @@ D:\Facultate\Semestrul II\.NET\YoutubeConverter\YoutubeConverter\bin\Debug\net5.
 D:\Facultate\Semestrul II\.NET\YoutubeConverter\YoutubeConverter\bin\Debug\net5.0-windows\ref\YoutubeConverter.dll
 D:\Facultate\Semestrul II\.NET\YoutubeConverter\YoutubeConverter\bin\Debug\net5.0-windows\YoutubeConverter.pdb
 D:\Facultate\Semestrul II\.NET\YoutubeConverter\YoutubeConverter\obj\Debug\net5.0-windows\YoutubeConverter.csprojAssemblyReference.cache
+D:\Facultate\Semestrul II\.NET\YoutubeConverter\YoutubeConverter\obj\Debug\net5.0-windows\ConvertPage.g.cs
 D:\Facultate\Semestrul II\.NET\YoutubeConverter\YoutubeConverter\obj\Debug\net5.0-windows\MainWindow.g.cs
+D:\Facultate\Semestrul II\.NET\YoutubeConverter\YoutubeConverter\obj\Debug\net5.0-windows\PlayPage.g.cs
 D:\Facultate\Semestrul II\.NET\YoutubeConverter\YoutubeConverter\obj\Debug\net5.0-windows\App.g.cs
 D:\Facultate\Semestrul II\.NET\YoutubeConverter\YoutubeConverter\obj\Debug\net5.0-windows\YoutubeConverter_MarkupCompile.cache
 D:\Facultate\Semestrul II\.NET\YoutubeConverter\YoutubeConverter\obj\Debug\net5.0-windows\YoutubeConverter_MarkupCompile.lref
+D:\Facultate\Semestrul II\.NET\YoutubeConverter\YoutubeConverter\obj\Debug\net5.0-windows\ConvertPage.baml
 D:\Facultate\Semestrul II\.NET\YoutubeConverter\YoutubeConverter\obj\Debug\net5.0-windows\MainWindow.baml
+D:\Facultate\Semestrul II\.NET\YoutubeConverter\YoutubeConverter\obj\Debug\net5.0-windows\PlayPage.baml
 D:\Facultate\Semestrul II\.NET\YoutubeConverter\YoutubeConverter\obj\Debug\net5.0-windows\YoutubeConverter.g.resources
 D:\Facultate\Semestrul II\.NET\YoutubeConverter\YoutubeConverter\obj\Debug\net5.0-windows\YoutubeConverter.GeneratedMSBuildEditorConfig.editorconfig
 D:\Facultate\Semestrul II\.NET\YoutubeConverter\YoutubeConverter\obj\Debug\net5.0-windows\YoutubeConverter.AssemblyInfoInputs.cache
@@ -20,7 +24,3 @@ D:\Facultate\Semestrul II\.NET\YoutubeConverter\YoutubeConverter\obj\Debug\net5.
 D:\Facultate\Semestrul II\.NET\YoutubeConverter\YoutubeConverter\obj\Debug\net5.0-windows\ref\YoutubeConverter.dll
 D:\Facultate\Semestrul II\.NET\YoutubeConverter\YoutubeConverter\obj\Debug\net5.0-windows\YoutubeConverter.pdb
 D:\Facultate\Semestrul II\.NET\YoutubeConverter\YoutubeConverter\obj\Debug\net5.0-windows\YoutubeConverter.genruntimeconfig.cache
-D:\Facultate\Semestrul II\.NET\YoutubeConverter\YoutubeConverter\obj\Debug\net5.0-windows\ConvertPage.g.cs
-D:\Facultate\Semestrul II\.NET\YoutubeConverter\YoutubeConverter\obj\Debug\net5.0-windows\ConvertPage.baml
-D:\Facultate\Semestrul II\.NET\YoutubeConverter\YoutubeConverter\obj\Debug\net5.0-windows\PlayPage.g.cs
-D:\Facultate\Semestrul II\.NET\YoutubeConverter\YoutubeConverter\obj\Debug\net5.0-windows\PlayPage.baml
