@@ -23,7 +23,7 @@ namespace YoutubeConverter
     public partial class PlayPage : Page
     {
         private Video video { get; set; }
-        private MediaPlayer mediaPlayer = new MediaPlayer();
+        private MediaPlayer mediaPlayer = new();
         public PlayPage(Video new_video)
         {
             InitializeComponent();
@@ -36,13 +36,13 @@ namespace YoutubeConverter
             //if (openFileDialog.ShowDialog() == true)
                 //mediaPlayer.Open(new Uri(openFileDialog.FileName));
 
-            DispatcherTimer timer = new DispatcherTimer();
+            DispatcherTimer timer = new();
             timer.Interval = TimeSpan.FromSeconds(1);
-            timer.Tick += timer_Tick;
+            timer.Tick += Timer_Tick;
             timer.Start();
         }
 
-        void timer_Tick(object sender, EventArgs e)
+        void Timer_Tick(object sender, EventArgs e)
         {
             if (mediaPlayer.NaturalDuration.HasTimeSpan && mediaPlayer.Source != null)
                 lblStatus.Content = String.Format("{0} / {1}", mediaPlayer.Position.ToString(@"mm\:ss"), mediaPlayer.NaturalDuration.TimeSpan.ToString(@"mm\:ss"));

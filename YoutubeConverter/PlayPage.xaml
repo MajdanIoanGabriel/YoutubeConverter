@@ -9,11 +9,39 @@
       Title="PlayPage">
 
     <StackPanel Margin="10">
-        <Label x:Name="video_title" Content="" HorizontalAlignment="Center" Margin="0,129,0,0" Width="500" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
-        <Label x:Name="lblStatus" Content="Not playing..." HorizontalContentAlignment="Center" Margin="5" />
+
+        <StackPanel.Background>
+            <ImageBrush ImageSource="D:\Facultate\Semestrul II\.NET\YoutubeConverter\images\play_background.jpg" Stretch="UniformToFill"></ImageBrush>
+        </StackPanel.Background>
+
+        <Label x:Name="video_title" Content="" HorizontalAlignment="Center" Margin="0,200,0,0" Width="780" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="32" FontFamily="MV Boli" Foreground="White"/>
+        <Label x:Name="lblStatus" Content="Not playing..." HorizontalContentAlignment="Center" FontSize="32" FontFamily="MV Boli" Background="Transparent" Foreground="White" />
         <WrapPanel HorizontalAlignment="Center">
+            <WrapPanel.Resources>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Red"/>
+                    <Setter Property="Foreground" Value="White"/>
+                    <Setter Property="FontFamily" Value="MV Boli"/>
+                    <Setter Property="FontSize" Value="28"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border BorderBrush="White" BorderThickness="2" CornerRadius="10" Padding="10,1,10,1" Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#FFFF3232"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </WrapPanel.Resources>
+
             <Button Name="btnPlay" Click="BtnPlay_Click">Play</Button>
-            <Button Name="btnPause" Margin="5,0" Click="BtnPause_Click">Pause</Button>
+            <Button Name="btnPause" Margin="15,0" Click="BtnPause_Click" BorderBrush="White">Pause</Button>
             <Button Name="btnStop" Click="BtnStop_Click">Stop</Button>
         </WrapPanel>
     </StackPanel>
